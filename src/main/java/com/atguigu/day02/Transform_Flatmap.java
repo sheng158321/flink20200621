@@ -1,6 +1,5 @@
 package com.atguigu.day02;
 
-import com.atguigu.bean.SensorReading;
 import org.apache.flink.api.common.functions.FlatMapFunction;
 import org.apache.flink.streaming.api.datastream.DataStreamSource;
 import org.apache.flink.streaming.api.datastream.SingleOutputStreamOperator;

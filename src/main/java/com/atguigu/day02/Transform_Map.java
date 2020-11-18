@@ -6,7 +6,7 @@ import org.apache.flink.streaming.api.datastream.DataStreamSource;
 import org.apache.flink.streaming.api.datastream.SingleOutputStreamOperator;
 import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
 
-public class Transform_MAp {
+public class Transform_Map {
     public static void main(String[] args) throws Exception {
 
         StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
@@ -26,6 +26,6 @@ public class Transform_MAp {
 
         map.print();
 
-        env.execute("Transform_MAp");
+        env.execute("Transform_Map");
     }
 }
