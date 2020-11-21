@@ -14,7 +14,6 @@ public class Transform_Flatmap {
         DataStreamSource<String> sensorDS = env.readTextFile("sensor");
 
         SingleOutputStreamOperator<String> flatMaps = sensorDS.flatMap(new FlatMapFunction<String, String>() {
-            @Override
             public void flatMap(String s, Collector<String> out) throws Exception {
                 String[] fields = s.split(",");
                 for (String field : fields) {

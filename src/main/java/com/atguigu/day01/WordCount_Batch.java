@@ -31,7 +31,7 @@ public class WordCount_Batch {
     }
 
     //自定义flatmap方法
-    static class MyFlatMapFunc implements FlatMapFunction<String, Tuple2<String, Integer>> {
+    public static class MyFlatMapFunc implements FlatMapFunction<String, Tuple2<String, Integer>> {
 
         public void flatMap(String value, Collector<Tuple2<String, Integer>> out) throws Exception {
 
