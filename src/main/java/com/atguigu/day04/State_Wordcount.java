@@ -33,11 +33,11 @@ public class State_Wordcount {
             private ValueState<Integer> countState = null;
 
 
-//            @Override
-//            public void open(Configuration parameters) throws Exception {
-//                countState = getRuntimeContext().getState(new ValueStateDescriptor<Integer>("count",
-//                        Integer.class, 0));
-//            }
+            @Override
+            public void open(Configuration parameters) throws Exception {
+                countState = getRuntimeContext().getState(new ValueStateDescriptor<Integer>("count",
+                        Integer.class, 0));
+            }
 
             @Override
             public Tuple2<String, Integer> map(Tuple2<String, Integer> value) throws Exception {
@@ -47,9 +47,6 @@ public class State_Wordcount {
 //                count += value.f1;
 
                 countState.update(count);
-
-                countState = getRuntimeContext().getState(new ValueStateDescriptor<Integer>("count",
-                        Integer.class, 0));
 
                 return new Tuple2<>(value.f0, count);
             }
